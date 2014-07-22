@@ -9,7 +9,7 @@ class Auth::DoorkeeperAuthenticator < Auth::OAuth2Authenticator
   end
 
   def register_middleware(omniauth)
-    omniauth.provider :doorkeeper, key, secret, {:provider_ignores_state => true}
+    omniauth.provider :doorkeeper, key, secret
   end
 
   def after_authenticate(auth_token)
